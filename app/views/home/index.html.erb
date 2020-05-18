@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 
 <head>
@@ -19,7 +18,7 @@
 
 <!-- stylesheet -->
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans+Condensed:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-<!-- <link rel="stylesheet"  href="css/home_stylesheet.css"> -->
+<%= stylesheet_link_tag "style/home", :media => "all" %>
 <!-- // stylesheet -->
 
 <!-- links js,img etc...-->
@@ -35,9 +34,9 @@
         <img src="assets/Title.png" id="title_img" width=270px height=auto/>
         <ul id="menu">
           <li>
-            <a href="about.html.erb" style="text-decoration:none;">
-              About
-            </a>
+            <p style="text-decoration:none;">
+              <%= link_to "About", home_about_path %>
+            </p>
           </li>
           <li>
             <a href="#link" style="text-decoration:none;">
@@ -45,9 +44,9 @@
             </a>
           </li>
           <li>
-            <a href="contact.html.erb" style="text-decoration:none;">
-              Contacts
-            </a>
+             <p style="text-decoration:none;">
+                <%= link_to "Contact", home_contact_path %>
+             </p>
           </li>
         </ul>
       </div>
