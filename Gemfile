@@ -7,14 +7,21 @@ end
 
 
 gem 'rails', '~> 5.1.7'
-gem 'sqlite3'
 gem 'puma', '~> 3.7'
+
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-# gem "actionview", ">= 5.2.4.2"
+gem "actionview", ">= 5.1.7"
+
+# 開発環境(ローカル)ではSQLite3を使用
+gem 'sqlite3', group: :development
+
+# 本番環境(heroku)ではPostgreSQLを使用
+gem 'pg', group: :production
+
 
 
 group :development, :test do
